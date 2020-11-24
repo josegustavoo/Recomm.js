@@ -1,8 +1,22 @@
 {
   "name": "recomm.js",
-  "version": "1.0.1",
+  "description": "Recomm.js is a javascript library used to build recommendation systems, using Content-Based Filtering System.",
+  "author": {
+  	"name": "José Gustavo"
+  },
+  "version": "1.0.2",
+  "keywords": [
+  	"recommendation",
+  	"mongodb",
+  	"similar",
+  	"similarity",
+  	"machine learning",
+  	"ai"
+  ],
   "main": "src/index.js",
   "license": "MIT",
+  "bugs": "https://github.com/josegustavoo/Recomm.js/issues",
+  "homepage": "https://github.com/josegustavoo/Recomm.js",
   "repository": {
  		"type": "git",
  		"url": "https://github.com/josegustavoo/Recomm.js.git"
