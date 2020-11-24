@@ -1,8 +1,12 @@
 {
-  "name": "RecommendationSystem",
+  "name": "recomm.js",
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": {
+ 		"type": "git",
+ 		"url": "https://github.com/josegustavoo/Recomm.js.git"
+ 	},
   "dependencies": {
     "mongodb": "^3.6.3",
     "node-cache": "^5.1.2",
