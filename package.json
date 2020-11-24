@@ -1,0 +1,12 @@
+{
+  "name": "RecommendationSystem",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^3.6.3",
+    "node-cache": "^5.1.2",
+    "stopword": "^1.0.3",
+    "string-similarity": "^4.0.3"
+  }
+}
