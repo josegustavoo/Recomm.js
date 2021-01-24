@@ -177,6 +177,21 @@ class Recommender {
 	}
 	
 	simplify(text) {
+		
+		if(typeof text == "number") {
+			text = text.toString()
+		} else if(typeof text == "string") {
+			text = text
+		} else if(text instanceof Date) {
+			text = text.toString()
+		} else if(Array.isArray(text)) {
+			text = text.toString()
+		} else if(typeof text == 'boolean') {
+			text = text
+		} else {
+			throw new Error('Typeof not supported')
+		}
+		
 		let newText = sw.removeStopwords(text.split(' '), sw.ptbr);
 		newText = newText.join(' ');
 		newText = newText.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -188,6 +203,12 @@ class Recommender {
 		let tag = [];
 		for(let i=0;i<this.options.fields.length;i++) {
 			let field = this.options.fields[i];
+			
+			if(!field) {
+				throw new Error('field not found')
+				break
+			}
+			
 			if(field.includes('.')) {
 				let [ key, value ] = field.split('.');
 				
