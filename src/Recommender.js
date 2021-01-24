@@ -8,6 +8,7 @@ class Recommender {
 		database: 'mongodb',
 		connection: {},
 		cache: 60 * 60 * 1,
+		dbName: 'database',
 		table: 'posts',
 		fields: [ 'title', 'description' ],
 		returnOptions: {
@@ -97,7 +98,7 @@ class Recommender {
 		try {
 			await this.client.connect();
 			
-			this.db = this.client.db('database');
+			this.db = this.client.db(this.options.dbName);
 		} catch(e) {
 			throw new Error(e);
 		}
