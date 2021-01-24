@@ -50,11 +50,9 @@ class Recommender {
 	
 	async getRecommendersPosts(postId) {
 		let postsFiltered = [];
-		if(typeof postId !== 'string')
-			throw new Error("postId is not string");
 			
 		return this.cache.get('recommended_posts_' + postId, async () => {
-			postId = new ObjectID(postId);
+			postId = typeof postId !== 'string' ? new ObjectID(postId) : postId
 			const target = await this.getPostById(postId);
 			
 			let fields = [];
@@ -204,3 +202,5 @@ class Recommender {
 		return tag.join(' ');
 	}
 }
+
+module.exports = Recommender;
