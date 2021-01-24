@@ -59,3 +59,4 @@ const recom = new Recommender({
 | `table` | string | Posts table name |
 | `fields` | array | Important fields of post, to use value from within an array, use `.` as a delimiter |
 | `returnOptions` | object | Options of return, options list: `fields`, `limit` |
+| `dbName` | string | Name database table  |
