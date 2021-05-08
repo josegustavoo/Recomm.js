@@ -90,10 +90,10 @@ function similarPosts(
     let itemText: string[] = [];
 
     fields.forEach((field: string) => {
-      const value = resolveArrayField(item, field);
+      let value = resolveArrayField(item, field);
 
       if (!value) {
-        throw new Error("Field not found in any post.");
+        value = "";
       }
 
       let newValue: string = removeStopwords(
